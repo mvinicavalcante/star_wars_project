@@ -26,7 +26,7 @@ const Header = () => {
                 <nav id='desktop'>
                     <a href='/'>Home</a>
                     <a href='/films'>Filmes</a>
-                    <a href='/'>Contato</a>
+                    <a href='/contact'>Contato</a>
                 </nav>
 
                 <nav id='mobile' onClick={toggleMenuMobile}>
