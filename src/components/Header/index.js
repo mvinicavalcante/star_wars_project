@@ -11,8 +11,14 @@ const Header = () => {
     const [navContato, setNavContato] = useState(false)
     const [isToggleMenuMobile, setIsToggleMenuMobile] = useState(false)
 
-    function toggleMenuMobile(){
+    function toggleMenuMobile() {
         setIsToggleMenuMobile(e => !e)
+    }
+
+    function navEffects(e) {
+        setNavHome(!e)
+        setNavFilmes(!e)
+        setNavContato(!e)
     }
 
     return(
@@ -35,12 +41,18 @@ const Header = () => {
                     <div className='menuMobileIcon'/>
                 </nav>
 
-                {isToggleMenuMobile &&
+                
+            </header>
+            {isToggleMenuMobile &&
                     <div className='menuMobile'>
-                        <p>a</p>
+                        <h1 onClick={toggleMenuMobile}>Voltar</h1>
+                        <ul>
+                            <li><a href='/'>Home</a></li>
+                            <li><a href='/films'>Films</a></li>
+                            <li><a href='/contact'>Contato</a></li>
+                        </ul>
                     </div>
                 }
-            </header>
         </div>
     )
 }

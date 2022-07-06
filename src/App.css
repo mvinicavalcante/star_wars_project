@@ -1,6 +1,17 @@
 * {
   background-image: url('../src/assets/background_star_wars.jpg');
   color: rgb(229, 177, 58);
+  list-style: none;
+}
+
+li{
+    display: inline-flex;
+    align-items: center;
+    padding-top: 1.3rem;
+}
+
+svg{
+  margin-right: 5px;
 }
 
 .App {

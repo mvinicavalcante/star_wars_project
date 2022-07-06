@@ -2,15 +2,14 @@ import { useState } from "react"
 
 const CardFilms = ({ title, sinopse, atores}) => {
 
-    const [verElenco, setVerElenco] = useState(true)
+    const [verElenco, setVerElenco] = useState(false)
+    const [verSinopse, setVerSinopse] = useState(true)
 
     return(
-        <div>
+        <div className="card">
             <h1>{title}</h1>
             <h3>{sinopse}</h3>
-            {verElenco &&
-                <button onClick={(e) => setVerElenco(!e)}>Ver elenco</button>
-            }
+            <button>Ver elenco</button>            
         </div>
     )
 }

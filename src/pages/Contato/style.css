@@ -1,0 +1,14 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+svg{
+    margin-top: 30px;
+}
