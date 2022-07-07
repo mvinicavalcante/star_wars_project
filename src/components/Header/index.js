@@ -13,6 +13,7 @@ const Header = () => {
 
     function toggleMenuMobile() {
         setIsToggleMenuMobile(e => !e)
+        //var scroll = document.querySelector(body)
     }
 
     function navEffects(e) {
@@ -29,7 +30,7 @@ const Header = () => {
                     width= '110px'
                 />
 
-                <nav id='desktop'>
+                <nav id='desktop'> 
                     <a href='/'>Home</a>
                     <a href='/films'>Filmes</a>
                     <a href='/contact'>Contato</a>
@@ -48,7 +49,7 @@ const Header = () => {
                         <h1 onClick={toggleMenuMobile}>Voltar</h1>
                         <ul>
                             <li><a href='/'>Home</a></li>
-                            <li><a href='/films'>Films</a></li>
+                            <li><a href='/films'>Filmes</a></li>
                             <li><a href='/contact'>Contato</a></li>
                         </ul>
                     </div>

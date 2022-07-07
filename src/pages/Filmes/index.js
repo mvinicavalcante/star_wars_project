@@ -7,7 +7,8 @@ import CardFilms from "../../components/CardFilms"
 const Filmes = ({ children }) => {
 
     const [listaFilmes, setListaFilmes] = useState([])
-
+    const [atores, setAtores] = useState([])
+    
     useEffect(() => {
         api.get('films').then(({data}) => {
             setListaFilmes(data.results)

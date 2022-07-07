@@ -8,8 +8,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Filmes from './pages/Filmes';
 import Contato from './pages/Contato';
-
-
+import FilmDetail from './pages/FilmDetail';
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/films' element={<Filmes />} />
             <Route path='/contact' element={<Contato />} />
+            <Route path='/film-detail' element={<FilmDetail />} />
           </Routes>
         </Router>
     </div>
