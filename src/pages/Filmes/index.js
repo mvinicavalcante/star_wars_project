@@ -1,10 +1,13 @@
 import './styles.css'
 import { useState, useEffect } from "react"
+import { useNavigate } from 'react-router-dom'
 import api from "../../services/api"
 
 import CardFilms from "../../components/CardFilms"
 
 const Filmes = ({ children }) => {
+
+    let navigate = useNavigate();
 
     const [listaFilmes, setListaFilmes] = useState([])
     const [atores, setAtores] = useState([])
@@ -12,9 +15,9 @@ const Filmes = ({ children }) => {
     useEffect(() => {
         api.get('films').then(({data}) => {
             setListaFilmes(data.results)
-        })
+        });
         console.log(listaFilmes)
-    }, [''])
+    }, ['']);
 
     return(
         <div className="lista-filmes">

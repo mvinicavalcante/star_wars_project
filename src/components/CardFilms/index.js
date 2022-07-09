@@ -16,18 +16,20 @@ const CardFilms = ({ title, sinopse, atores}) => {
     return(
         <div className="card">
             <h1>{title}</h1>
+
             {btnVerElenco === false && 
                 <h3>{sinopse}</h3>
             }
+
             {btnVerElenco &&
             <ul>
-                {atores.map(() => (
-                    <li>{atores}</li>
-                ))}
+                <li>{atores}</li>
             </ul>
             }
             
-            <button onClick={ changeButton }>{btnVerElenco ? 'Ver sinopse' : 'Ver elenco'}</button>            
+            <button onClick={ changeButton }>
+                {btnVerElenco ? 'Ver sinopse' : 'Ver elenco'}
+            </button>            
         </div>
     )
 }
