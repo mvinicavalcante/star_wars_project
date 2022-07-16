@@ -9,11 +9,14 @@ const Filmes = ({ children }) => {
 
 
     const [listaFilmes, setListaFilmes] = useState([]);
+
+    let navigate = useNavigate()
     
     useEffect(() => {
         api.get('films').then(({data}) => {
             setListaFilmes(data.results)
         });
+        
         console.log(listaFilmes)
 
     }, ['']);
@@ -22,7 +25,8 @@ const Filmes = ({ children }) => {
         <div className="lista-filmes">
             <div className={children}>
                 {listaFilmes?.map((data, index) => (
-                    <CardFilms key={index} title={data.title} sinopse= {data.opening_crawl} atores= {[data.characters]} />
+                    <CardFilms key={index} title={data.title} sinopse={data.opening_crawl} atores= {data.characters} />
+                   
                 ))}
             </div>
         </div>

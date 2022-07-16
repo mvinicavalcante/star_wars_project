@@ -10,6 +10,13 @@ li{
     padding-top: 1.3rem;
 }
 
+.lista-personagens{
+  margin-left: -40px;
+  text-align: center;
+  display: block;
+  background: transparent;
+}
+
 svg{
   margin-right: 5px;
 }
