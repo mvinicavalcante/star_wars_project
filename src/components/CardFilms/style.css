@@ -1,7 +1,27 @@
 .card{
-    color: aliceblue;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgb(229, 177, 58);
 }
 
 li{
     font-size: large;
+}
+
+.btn-filme{
+    margin: 15px;
+    padding: 5px;
+    border-radius: 7px;
+    border-color: rgb(229, 177, 58);
+    text-shadow: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-filme:hover{
+    background-color: rgb(229, 177, 58);
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 1s;
 }

@@ -1,8 +1,10 @@
+import './style.css'
+
 import api from '../../services/api'
 import axios from 'axios'
 import { useState, useEffect } from "react"
 
-const CardFilms = ({ title, sinopse, atores }) => {
+const CardFilms = ({ title, sinopse, person }) => {
     
     const [btnVerElenco, setBtnVerElenco] = useState(false)
     const [personagens, setPersonagens] = useState([])
@@ -12,21 +14,19 @@ const CardFilms = ({ title, sinopse, atores }) => {
       });
 
     useEffect(() => {
-
         var aux = []
-
         Promise.all(
-            atores.map(async (id) => {
+            person.map(async (id) => {
                 await api2.get(id).then((data) => {
+                    setPersonagens(aux)
                     aux = personagens
                     aux.push(data.data.name)
-                    setPersonagens(aux)
                     console.log(aux)
                 })                
             })
         )
         
-    }, ['']);
+    }, [0]);
 
     //Passar o id do characters do filme, puxar o id dele aqui pra colocar na URL do 'people' e pegar o nome
     
@@ -51,13 +51,11 @@ const CardFilms = ({ title, sinopse, atores }) => {
                         )
                     })}
                 </ul>
-
                 :
-
                 <h3>{sinopse}</h3>
             }
             
-            <button onClick={ changeButton }>
+            <button className='btn-filme' onClick={ changeButton }>
                 {btnVerElenco ? 'Ver sinopse' : 'Ver elenco'}
             </button>            
         </div>
