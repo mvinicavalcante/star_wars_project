@@ -1,5 +1,7 @@
 import './styles.css'
 
+import Darth from "../../assets/darth-vader.png"
+
 const Home = () => {
     return(
         <div className="main">
@@ -10,6 +12,11 @@ const Home = () => {
                 estilização e lógica aplicada no desenvolvimento.
                 Espero que goste e aproveite para consumir conteúdo do mais querido, o Star Wars!
             </p>
+            <br />
+            <img 
+                src={Darth}
+                width= '350px'
+            />
         </div>
     )
 }

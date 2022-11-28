@@ -1,4 +1,4 @@
-header {
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,11 +18,6 @@ a{
     font-size: 20px;
 }
 
-nav[id='mobile']{
-    display: none;
-    display: flex;
-    flex-direction: column;
-}
 
 a:hover{
     transition: .5s;
@@ -39,16 +34,15 @@ a:hover{
 }
 
 .menuMobile{
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
     position: absolute;
     z-index: 100000;
-    background: black;
     height: 100vh;
     width: 100vw;
-    color: white;
+}
+
+.menuMobile ul > li {
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 615px) {

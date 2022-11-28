@@ -23,8 +23,8 @@ const Header = () => {
     }
 
     return(
-        <div className='header'>
-            <header>
+        <>
+            <header className='header'>
                 <img 
                     src={Logo}
                     width= '110px'
@@ -47,14 +47,20 @@ const Header = () => {
             {isToggleMenuMobile &&
                     <div className='menuMobile'>
                         <h1 onClick={toggleMenuMobile}>Voltar</h1>
-                        <ul>
-                            <li><a href='/'>Home</a></li>
-                            <li><a href='/films'>Filmes</a></li>
-                            <li><a href='/contact'>Contato</a></li>
-                        </ul>
+                            <ul>
+                                <li>
+                                    <a href='/'>Home</a>
+                                </li>
+                                <li>
+                                    <a href='/films'>Filmes</a>
+                                </li>
+                                <li>
+                                    <a href='/contact'>Contato</a>
+                                </li>
+                            </ul>
                     </div>
                 }
-        </div>
+        </>
     )
 }
 
