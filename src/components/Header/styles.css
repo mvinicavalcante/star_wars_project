@@ -25,8 +25,15 @@ a:hover{
     font-size: 25px;
 }
 
+nav[id='mobile']{
+    display: none;
+    display: flex;
+    flex-direction: column;
+}
+
 .menuMobileIcon{
     display: none;
+    flex-direction: column;
     border: 1px solid rgb(229, 177, 58);
     height: 1px;
     width: 20px;
@@ -34,9 +41,13 @@ a:hover{
 }
 
 .menuMobile{
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     z-index: 100000;
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
 }
 

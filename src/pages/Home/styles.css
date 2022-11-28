@@ -1,13 +1,23 @@
 *{
     color: rgb(229, 177, 58);
     text-align: center;
+    overflow-x: hidden;
 }
 
-main{
-    padding: 0px 100px;
-}
 
 p{
     padding: 0px 100px;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 580px) {
+    *{
+        overflow-x: hidden;
+    }
+    main{
+        padding: 10px 50px;
+    }
+    h2{
+        font-size: medium;
+    }
 }
