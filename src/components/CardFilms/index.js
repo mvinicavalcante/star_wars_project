@@ -18,9 +18,9 @@ const CardFilms = ({ title, sinopse, person }) => {
         Promise.all(
             person.map(async (id) => {
                 await api2.get(id).then((data) => {
-                    setPersonagens(aux)
-                    aux = personagens
+                    
                     aux.push(data.data.name)
+                    setPersonagens(aux)
                     console.log(aux)
                 })                
             })
@@ -31,7 +31,7 @@ const CardFilms = ({ title, sinopse, person }) => {
     //Passar o id do characters do filme, puxar o id dele aqui pra colocar na URL do 'people' e pegar o nome
     
     function changeButton() {
-        if(btnVerElenco === false ) {
+        if(btnVerElenco === false) {
             setBtnVerElenco(true)
         }
         else{

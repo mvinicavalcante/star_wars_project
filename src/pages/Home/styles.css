@@ -14,9 +14,11 @@ p{
     *{
         overflow-x: hidden;
     }
+
     main{
         padding: 10px 50px;
     }
+    
     h2{
         font-size: medium;
     }
