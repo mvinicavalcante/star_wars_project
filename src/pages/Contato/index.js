@@ -5,7 +5,7 @@ const Contato = () => {
         <ul>
             <h1>Clique em um dos links e entre em contato comigo!</h1>
 
-            <a href='https://contate.me/MarcosViniciusCavalcante' target="_blank">
+            <a href='https://contate.me/marcos-vinicius-cavalcante' target="_blank">
                 <li><FaWhatsapp size={25} text-anchor="middle"/> WhatsApp</li>
             </a><br />
             <a href='https://www.instagram.com/m.v_cavalcante/' target="_blank">
